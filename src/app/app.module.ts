@@ -3,18 +3,20 @@ import {BrowserModule} from '@angular/platform-browser';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {ChapterCreateComponent} from './components/chapter-create/chapter-create.component';
-import {ChapterReadComponent} from './components/chapter-read/chapter-read.component';
-import {ChapterUpdadeComponent} from './components/chapter-updade/chapter-updade.component';
-import {ChapterDeleteComponent} from './components/chapter-delete/chapter-delete.component';
+import { CreateComponent } from './components/chapter/create/create.component';
+import { ReadComponent } from './components/chapter/read/read.component';
+import { UpdateComponent } from './components/chapter/update/update.component';
+import { DeleteComponent } from './components/chapter/delete/delete.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ChapterCreateComponent,
-    ChapterReadComponent,
-    ChapterUpdadeComponent,
-    ChapterDeleteComponent
+    CreateComponent,
+    ReadComponent,
+    UpdateComponent,
+    DeleteComponent
+
   ],
   imports: [
     BrowserModule,
