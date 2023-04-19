@@ -10,7 +10,7 @@ export class ChapterService {
 
   baseUrl = "http://localhost:3001/chapter"
 
-  constructor(private chapter: Chapter, private http: HttpClient) {
+  constructor(private http: HttpClient) {
   }
 
   obterTodos(): Observable<any> {
@@ -19,13 +19,19 @@ export class ChapterService {
   criarChapter(chapter: Chapter): Observable<Chapter> {
     return this.http.post<Chapter>(this.baseUrl, chapter)
   }
-  delete(id: number | undefined): Observable<Chapter> {
+
+  delete(id: string | undefined): Observable<Chapter> {
     const url = `${this.baseUrl}/${id}`
     return this.http.delete<Chapter>(url)
   }
   readById(id: string | null): Observable<any>{
     const url = `${this.baseUrl}/${id}`
     return this.http.get<Chapter>(url)
+  }
+
+  update(chapter: Chapter): Observable<Chapter> {
+    const url = `${this.baseUrl}/${chapter.chapter_id}`
+    return this.http.put<Chapter>(url, chapter)
   }
 }
 

@@ -1,8 +1,8 @@
 export interface Chapter {
 
-  chapter_id?: number;
+  chapter_id?: string;
   chapter_nome: string;
   chapter_descricao?: string;
   chapter_status?: string;
-  usuario_id?: "Usuario";
+  usuario_id?: string;
 }
