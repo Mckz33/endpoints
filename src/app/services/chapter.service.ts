@@ -16,7 +16,8 @@ export class ChapterService {
   obterTodos(): Observable<any> {
     return this.http.get<Chapter[]>(this.baseUrl)
   }
-  criarChapter(chapter: Chapter): Observable<Chapter> {
+
+    criarChapter(chapter: Chapter[]): Observable<Chapter> {
     return this.http.post<Chapter>(this.baseUrl, chapter)
   }
 

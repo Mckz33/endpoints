@@ -7,6 +7,8 @@ import { CreateComponent } from './components/chapter/create/create.component';
 import { ReadComponent } from './components/chapter/read/read.component';
 import { UpdateComponent } from './components/chapter/update/update.component';
 import { DeleteComponent } from './components/chapter/delete/delete.component';
+import {HttpClientModule} from "@angular/common/http";
+import {RouterModule} from "@angular/router";
 
 
 @NgModule({
@@ -15,12 +17,14 @@ import { DeleteComponent } from './components/chapter/delete/delete.component';
     CreateComponent,
     ReadComponent,
     UpdateComponent,
-    DeleteComponent
+    DeleteComponent,
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
