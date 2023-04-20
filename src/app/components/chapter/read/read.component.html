@@ -1,5 +1,5 @@
-<ul>
-  <li *ngFor="let chapter of chapter">
-    {{ chapter.chapter_nome }}
-  </li>
-</ul>
+<mat-selection-list>
+  <mat-list *ngFor="let cp of chapter">
+    {{ cp.chapter_nome }}
+  </mat-list>
+</mat-selection-list>

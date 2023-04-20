@@ -1,1 +1,12 @@
-<p>create works!</p>
+<p>
+  <mat-form-field appearance="outline">
+    <mat-label>Nome</mat-label>
+    <input matInput [(ngModel)]="chapter.chapter_nome" [ngModelOptions]="{standalone: true}" placeholder="Digite o Nome">
+    <mat-icon matSuffix></mat-icon>
+  </mat-form-field>
+</p>
+<section>
+  <div class="example-button-row">
+    <button mat-raised-button color="Criar" (click)="criarChapter()">Salvar</button>
+  </div>
+</section>

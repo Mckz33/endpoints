@@ -15,7 +15,9 @@ export class ReadComponent implements OnInit{
     })
   }
   chapter: Chapter[] = [
-    {chapter_nome: ""}
+    {
+      chapter_nome: ""
+    }
   ]
   constructor(private chapterService: ChapterService) {
   }

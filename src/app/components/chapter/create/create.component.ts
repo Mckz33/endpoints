@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {Chapter} from "../../../models/chapter";
 import {ChapterService} from "../../../services/chapter.service";
+import {FormControl, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-create',
@@ -8,9 +9,10 @@ import {ChapterService} from "../../../services/chapter.service";
   styleUrls: ['./create.component.css']
 })
 export class CreateComponent {
-  chapter: Chapter[] = [
-    {chapter_nome: ""}
-  ]
+  chapter: Chapter =
+    {
+      chapter_nome: ''
+    }
 
   constructor(private chapterService: ChapterService) {
   }

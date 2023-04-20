@@ -8,13 +8,14 @@ import {ChapterService} from "../../../services/chapter.service";
   styleUrls: ['./delete.component.css']
 })
 export class DeleteComponent {
-  chapter: Chapter = {
-    chapter_nome: ""
-  }
+  chapter: Chapter =
+    {
+      chapter_nome: ""
+    }
   constructor(private chapterService: ChapterService) {
   }
   deletarChapter() {
-      this.chapterService.delete(this.chapter.chapter_id).subscribe(() => {
+      this.chapterService.delete(this.chapter.chapter_nome).subscribe(() => {
         console.log("Deletado com sucesso!")
       })
   }

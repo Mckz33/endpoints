@@ -8,9 +8,12 @@ import {Chapter} from "../../../models/chapter";
   styleUrls: ['./update.component.css']
 })
 export class UpdateComponent {
-  chapter: Chapter = {
-    chapter_nome: ""
-  }
+  chapter: Chapter =
+    {
+      chapter_id: null as unknown as number,
+      chapter_nome: ""
+    }
+
   constructor(private chapterService: ChapterService) {
   }
   updateChapter() {
