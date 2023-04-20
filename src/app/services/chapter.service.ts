@@ -21,7 +21,7 @@ export class ChapterService {
     return this.http.post<Chapter>(this.baseUrl, chapter)
   }
 
-  delete(id: string): Observable<Chapter> {
+  delete(id: number | undefined): Observable<Chapter> {
     const url = `${this.baseUrl}/${id}`
     return this.http.delete<Chapter>(url)
   }

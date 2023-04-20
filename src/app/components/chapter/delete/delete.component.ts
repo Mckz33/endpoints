@@ -10,12 +10,13 @@ import {ChapterService} from "../../../services/chapter.service";
 export class DeleteComponent {
   chapter: Chapter =
     {
+      chapter_id: null as unknown as number,
       chapter_nome: ""
     }
   constructor(private chapterService: ChapterService) {
   }
   deletarChapter() {
-      this.chapterService.delete(this.chapter.chapter_nome).subscribe(() => {
+      this.chapterService.delete(this.chapter.chapter_id).subscribe(() => {
         console.log("Deletado com sucesso!")
       })
   }
