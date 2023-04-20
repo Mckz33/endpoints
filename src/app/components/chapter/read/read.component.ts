@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Chapter} from "../../../models/chapter";
 import {ChapterService} from "../../../services/chapter.service";
 
@@ -7,8 +7,16 @@ import {ChapterService} from "../../../services/chapter.service";
   templateUrl: './read.component.html',
   styleUrls: ['./read.component.css']
 })
-export class ReadComponent {
-  chapter: Chapter[] = []
+export class ReadComponent implements OnInit{
+  ngOnInit(): void {
+    this.chapterService.obterTodos().subscribe(todos => {
+      this.chapter = todos
+      console.log(todos)
+    })
+  }
+  chapter: Chapter[] = [
+    {chapter_nome: ""}
+  ]
   constructor(private chapterService: ChapterService) {
   }
   obterTodos() {
