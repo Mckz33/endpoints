@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import {Chapter} from "../../../models/chapter";
-import {HttpClient} from "@angular/common/http";
 import {ChapterService} from "../../../services/chapter.service";
 
 @Component({
