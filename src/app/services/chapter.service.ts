@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Chapter} from "../models/chapter";
+import {Chapter} from "../models/Chapter";
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 
@@ -31,7 +31,7 @@ export class ChapterService {
   }
 
   update(chapter: Chapter): Observable<Chapter> {
-    const url = `${this.baseUrl}/${chapter.chapter_id}`
+    const url = `${this.baseUrl}/${chapter.id}`
     return this.http.put<Chapter>(url, chapter)
   }
 }

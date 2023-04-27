@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {ChapterService} from "../../../services/chapter.service";
-import {Chapter} from "../../../models/chapter";
+import {Chapter} from "../../../models/Chapter";
 
 @Component({
   selector: 'app-update',
@@ -10,8 +10,8 @@ import {Chapter} from "../../../models/chapter";
 export class UpdateComponent {
   chapter: Chapter =
     {
-      chapter_id: null as unknown as number,
-      chapter_nome: ""
+      id: null as unknown as number,
+      nome: ""
     }
 
   constructor(private chapterService: ChapterService) {

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Chapter} from "../../../models/chapter";
+import {Chapter} from "../../../models/Chapter";
 import {ChapterService} from "../../../services/chapter.service";
 
 @Component({
@@ -10,13 +10,13 @@ import {ChapterService} from "../../../services/chapter.service";
 export class DeleteComponent {
   chapter: Chapter =
     {
-      chapter_id: null as unknown as number,
-      chapter_nome: ""
+      id: null as unknown as number,
+      nome: ""
     }
   constructor(private chapterService: ChapterService) {
   }
   deletarChapter() {
-      this.chapterService.delete(this.chapter.chapter_id).subscribe(() => {
+      this.chapterService.delete(this.chapter.id).subscribe(() => {
         console.log("Deletado com sucesso!")
       })
   }

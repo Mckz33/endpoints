@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Chapter} from "../../../models/chapter";
+import {Chapter} from "../../../models/Chapter";
 import {ChapterService} from "../../../services/chapter.service";
 
 @Component({
@@ -16,7 +16,7 @@ export class ReadComponent implements OnInit{
   }
   chapter: Chapter[] = [
     {
-      chapter_nome: ""
+      nome: ""
     }
   ]
   constructor(private chapterService: ChapterService) {
