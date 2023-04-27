@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {Chapter} from "../../../models/Chapter";
 import {ChapterService} from "../../../services/chapter.service";
+import {Usuario} from "../../../models/Usuario";
 
 @Component({
   selector: 'app-create',
@@ -15,7 +16,7 @@ export class CreateComponent {
       status: "",
       usuario_id:
         {
-          userName: "Ronaldo"
+          userName: ""
         }
     }
 
@@ -23,6 +24,7 @@ export class CreateComponent {
   }
 
   criarChapter() {
+    this.chapter.usuario_id = {userName: "Mario"}
     this.chapterService.criarChapter(this.chapter).subscribe(() => {
       console.log("Criado com sucesso!")
     })
