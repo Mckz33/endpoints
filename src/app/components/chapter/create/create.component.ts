@@ -11,6 +11,7 @@ import {Usuario} from "../../../models/Usuario";
 export class CreateComponent {
   public chapter: Chapter =
     {
+      id: null as unknown as number,
       descricao: "",
       nome: "",
       status: "",

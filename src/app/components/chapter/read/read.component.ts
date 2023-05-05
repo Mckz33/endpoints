@@ -16,7 +16,14 @@ export class ReadComponent implements OnInit{
   }
   chapter: Chapter[] = [
     {
-      nome: ""
+      id: null as unknown as number,
+      descricao: "",
+      nome: "",
+      status: "",
+      usuario_id:
+        {
+          userName: ""
+        }
     }
   ]
   constructor(private chapterService: ChapterService) {

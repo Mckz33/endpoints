@@ -11,7 +11,13 @@ export class UpdateComponent {
   chapter: Chapter =
     {
       id: null as unknown as number,
-      nome: ""
+      descricao: "",
+      nome: "",
+      status: "",
+      usuario_id:
+        {
+          userName: ""
+        }
     }
 
   constructor(private chapterService: ChapterService) {
