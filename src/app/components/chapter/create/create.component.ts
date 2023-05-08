@@ -1,7 +1,6 @@
 import {Component} from '@angular/core';
 import {Chapter} from "../../../models/Chapter";
 import {ChapterService} from "../../../services/chapter.service";
-import {Usuario} from "../../../models/Usuario";
 
 @Component({
   selector: 'app-create',

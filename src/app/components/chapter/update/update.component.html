@@ -11,6 +11,16 @@
     <input matInput [(ngModel)]="chapter.nome" [ngModelOptions]="{standalone: true}" placeholder="Digite o Nome" required>
     <mat-icon matSuffix></mat-icon>
   </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Descricao</mat-label>
+    <input matInput [(ngModel)]="chapter.descricao" [ngModelOptions]="{standalone: true}" name="descricao" placeholder="Digite a Descricao" required>
+    <mat-icon matSuffix></mat-icon>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Status</mat-label>
+    <input matInput [(ngModel)]="chapter.status" [ngModelOptions]="{standalone: true}" name="status" placeholder="Digite o Status" required>
+    <mat-icon matSuffix></mat-icon>
+  </mat-form-field>
 </p>
 <section>
   <div class="example-button-row">
