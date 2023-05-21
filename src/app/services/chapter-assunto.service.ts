@@ -32,7 +32,7 @@ export class ChapterAssuntoService {
   }
 
   update(chapterAssunto: ChapterAssunto): Observable<ChapterAssunto> {
-    const url = `${this.baseUrl}/${chapterAssunto.id}`
+    const url = `${this.baseUrl}/${chapterAssunto.chapter_id}`
     return this.http.put<ChapterAssunto>(url, chapterAssunto)
   }
 }
