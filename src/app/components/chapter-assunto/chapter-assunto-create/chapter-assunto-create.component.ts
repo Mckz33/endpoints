@@ -9,16 +9,18 @@ import {ChapterAssuntoService} from "../../../services/chapter-assunto.service";
 })
 export class ChapterAssuntoCreateComponent {
 
-  chapterAssunto: ChapterAssunto = {
-    id: null as unknown as number,
-    descricao: "",
-    status: null as unknown as number,
-    chapter: {
-      id: null as unknown as number,
-      nome: "",
-      descricao: "",
-      status: "",
+  public chapterAssunto: ChapterAssunto = {
+    chapter_assunto_id: null as unknown as number,
+    chapter_assunto_descricao: "",
+    chapter_assunto_contador_visualizacao: null as unknown as number,
+    chapter_assunto_status: null as unknown as number,
+    chapter_id: {
+      chapter_id: null as unknown as number,
+      chapter_nome: "",
+      chapter_descricao: "",
+      chapter_status: null as unknown as number,
       usuario_id: {
+        id: "",
         userName: "",
         normalizedUserName: "",
         normalizedEmail: "",
@@ -41,10 +43,11 @@ export class ChapterAssuntoCreateComponent {
         telefone: "",
         dataCadastro: new Date(),
         status: null as unknown as number,
-        senacCoin: ""
+        senacCoin: "",
       }
     },
-    usuario: {
+    usuario_id: {
+      id: "",
       userName: "",
       normalizedUserName: "",
       normalizedEmail: "",
@@ -76,7 +79,7 @@ export class ChapterAssuntoCreateComponent {
 
   criarChapterAssunto(chapterAssunto: ChapterAssunto) {
     this.chapterAssuntoService.criar(this.chapterAssunto).subscribe(() => {
-      console.log("Criado com sucesso!")
+      console.log()
     })
   }
 

@@ -2,9 +2,9 @@ import {Usuario} from "./Usuario";
 
 export interface Chapter {
 
-  id: number;
-  nome: string;
-  descricao: string;
-  status: string;
-  usuario_id: Usuario;
+  chapter_id: number
+  chapter_nome: string
+  chapter_descricao: string
+  chapter_status: number
+  usuario_id: Usuario
 }

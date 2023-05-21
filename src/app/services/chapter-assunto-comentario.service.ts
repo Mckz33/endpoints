@@ -17,11 +17,11 @@ export class ChapterAssuntoComentarioService {
     return this.http.get<ChapterAssuntoComentario[]>(this.baseUrl)
   }
 
-  criarChapter(chapterAssuntoComentario: ChapterAssuntoComentario): Observable<ChapterAssuntoComentario> {
+  criarChapterAssuntoComentario(chapterAssuntoComentario: ChapterAssuntoComentario): Observable<ChapterAssuntoComentario> {
     return this.http.post<ChapterAssuntoComentario>(this.baseUrl, chapterAssuntoComentario)
   }
 
-  delete(id: number | undefined): Observable<ChapterAssuntoComentario> {
+  delete(id: ChapterAssuntoComentario): Observable<ChapterAssuntoComentario> {
     const url = `${this.baseUrl}/${id}`
     return this.http.delete<ChapterAssuntoComentario>(url)
   }

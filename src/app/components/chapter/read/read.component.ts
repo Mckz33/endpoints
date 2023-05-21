@@ -14,18 +14,38 @@ export class ReadComponent implements OnInit{
       console.log(todos)
     })
   }
-  chapter: Chapter[] = [
-    {
-      id: null as unknown as number,
-      descricao: "",
-      nome: "",
-      status: "",
-      usuario_id:
-        {
-          userName: ""
-        }
+  public chapter: Chapter[] = [{
+    chapter_id: null as unknown as number,
+    chapter_nome: "",
+    chapter_descricao: "",
+    chapter_status: null as unknown as number,
+    usuario_id: {
+      id: "",
+      userName: "",
+      normalizedUserName: "",
+      normalizedEmail: "",
+      emailConfirmed: false,
+      passwordHash: "",
+      securityStamp: "",
+      concurrencyStamp: "",
+      phoneNumber: "",
+      phoneNumberConfirmed: false,
+      twoFactorEnabled: false,
+      lockoutEnd: new Date(),
+      lockoutEnabled: false,
+      accessFailedCount: null as unknown as number,
+      cpf: "",
+      foto: "",
+      nomeCompleto: "",
+      apelido: "",
+      email: "",
+      dataNascimento: new Date(),
+      telefone: "",
+      dataCadastro: new Date(),
+      status: null as unknown as number,
+      senacCoin: "",
     }
-  ]
+  }]
   constructor(private chapterService: ChapterService) {
   }
   obterTodos() {
