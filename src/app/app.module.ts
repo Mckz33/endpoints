@@ -28,6 +28,10 @@ import {
 import {
   ChapterAssuntoComentarioDeleteComponent
 } from './components/chapter-assunto-comentario/chapter-assunto-comentario-delete/chapter-assunto-comentario-delete.component';
+import { ChapterAssuntoCreateComponent } from './components/chapter-assunto/chapter-assunto-create/chapter-assunto-create.component';
+import { ChapterAssuntoReadComponent } from './components/chapter-assunto/chapter-assunto-read/chapter-assunto-read.component';
+import { ChapterAssuntoUpdateComponent } from './components/chapter-assunto/chapter-assunto-update/chapter-assunto-update.component';
+import { ChapterAssuntoDeleteComponent } from './components/chapter-assunto/chapter-assunto-delete/chapter-assunto-delete.component';
 
 
 @NgModule({
@@ -41,6 +45,10 @@ import {
     ChapterAssuntoComentarioReadComponent,
     ChapterAssuntoComentarioUpdateComponent,
     ChapterAssuntoComentarioDeleteComponent,
+    ChapterAssuntoCreateComponent,
+    ChapterAssuntoReadComponent,
+    ChapterAssuntoUpdateComponent,
+    ChapterAssuntoDeleteComponent,
 
   ],
   imports: [
