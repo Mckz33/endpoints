@@ -3,7 +3,7 @@ import {Usuario} from "./Usuario";
 
 export interface ChapterAssunto {
 
-  id?: number;
+  id: number;
   descricao: string;
   status: number;
   chapter: Chapter;

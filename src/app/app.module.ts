@@ -16,8 +16,18 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatListModule} from "@angular/material/list";
-import { ChapterAssuntoComentarioComponent } from './components/chapter-assunto-comentario/chapter-assunto-comentario.component';
-
+import {
+  ChapterAssuntoComentarioCreateComponent
+} from './components/chapter-assunto-comentario/chapter-assunto-comentario-create/chapter-assunto-comentario-create.component';
+import {
+  ChapterAssuntoComentarioReadComponent
+} from './components/chapter-assunto-comentario/chapter-assunto-comentario-read/chapter-assunto-comentario-read.component';
+import {
+  ChapterAssuntoComentarioUpdateComponent
+} from './components/chapter-assunto-comentario/chapter-assunto-comentario-update/chapter-assunto-comentario-update.component';
+import {
+  ChapterAssuntoComentarioDeleteComponent
+} from './components/chapter-assunto-comentario/chapter-assunto-comentario-delete/chapter-assunto-comentario-delete.component';
 
 
 @NgModule({
@@ -27,7 +37,10 @@ import { ChapterAssuntoComentarioComponent } from './components/chapter-assunto-
     ReadComponent,
     UpdateComponent,
     DeleteComponent,
-    ChapterAssuntoComentarioComponent,
+    ChapterAssuntoComentarioCreateComponent,
+    ChapterAssuntoComentarioReadComponent,
+    ChapterAssuntoComentarioUpdateComponent,
+    ChapterAssuntoComentarioDeleteComponent,
 
   ],
   imports: [

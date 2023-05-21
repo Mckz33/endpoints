@@ -25,7 +25,7 @@ export class CreateComponent {
 
   criarChapter() {
     this.chapter.usuario_id = {userName: "Mario"}
-    this.chapterService.criarChapter(this.chapter).subscribe(() => {
+    this.chapterService.criar(this.chapter).subscribe(() => {
       console.log("Criado com sucesso!")
     })
   }

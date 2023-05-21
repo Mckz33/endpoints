@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {Chapter} from "../models/Chapter";
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
+import {ChapterAssunto} from "../models/Chapter-assunto";
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +18,7 @@ export class ChapterService {
     return this.http.get<Chapter[]>(this.baseUrl)
   }
 
-  criarChapter(chapter: Chapter): Observable<Chapter> {
+  criar(chapter: Chapter): Observable<Chapter> {
     return this.http.post<Chapter>(this.baseUrl, chapter)
   }
 
