@@ -18,8 +18,8 @@ export class ChapterService {
     return this.http.get<Chapter[]>(this.baseUrl)
   }
 
-  criar(chapterAssunto: ChapterAssunto): Observable<Chapter> {
-    return this.http.post<Chapter>(this.baseUrl, chapterAssunto)
+  criar(chapter: Chapter): Observable<Chapter> {
+    return this.http.post<Chapter>(this.baseUrl, chapter)
   }
 
   delete(id: number | undefined): Observable<Chapter> {
