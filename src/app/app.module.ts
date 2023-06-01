@@ -32,6 +32,10 @@ import { ChapterAssuntoCreateComponent } from './components/chapter-assunto/chap
 import { ChapterAssuntoReadComponent } from './components/chapter-assunto/chapter-assunto-read/chapter-assunto-read.component';
 import { ChapterAssuntoUpdateComponent } from './components/chapter-assunto/chapter-assunto-update/chapter-assunto-update.component';
 import { ChapterAssuntoDeleteComponent } from './components/chapter-assunto/chapter-assunto-delete/chapter-assunto-delete.component';
+import {MatCardModule} from "@angular/material/card";
+import {MatTableModule} from "@angular/material/table";
+import {MatSortModule} from "@angular/material/sort";
+import {MatPaginatorModule} from "@angular/material/paginator";
 
 
 @NgModule({
@@ -64,6 +68,10 @@ import { ChapterAssuntoDeleteComponent } from './components/chapter-assunto/chap
     BrowserAnimationsModule,
     MatListModule,
     FormsModule,
+    MatCardModule,
+    MatTableModule,
+    MatSortModule,
+    MatPaginatorModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

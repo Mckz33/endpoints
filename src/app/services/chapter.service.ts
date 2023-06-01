@@ -21,17 +21,17 @@ export class ChapterService {
     return this.http.post<Chapter>(this.baseUrl, chapter)
   }
 
-  delete(id: Chapter): Observable<Chapter> {
+  delete(id: number): Observable<Chapter> {
     const url = `${this.baseUrl}/${id}`
     return this.http.delete<Chapter>(url)
   }
 
-  readById(id: string | null): Observable<any> {
+  readById(id: number | null): Observable<any> {
     const url = `${this.baseUrl}/${id}`
     return this.http.get<Chapter>(url)
   }
 
-  update(chapter: Chapter[]): Observable<Chapter> {
+  update(chapter: Chapter): Observable<Chapter> {
     const url = `${this.baseUrl}/${chapter}`
     return this.http.put<Chapter>(url, chapter)
   }

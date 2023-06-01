@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {Chapter} from "../../../models/Chapter";
 import {ChapterService} from "../../../services/chapter.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-create',
@@ -42,13 +43,16 @@ export class CreateComponent {
     }
   }
 
-  constructor(private chapterService: ChapterService) {
+  constructor(private chapterService: ChapterService, private router: Router) {
   }
 
   criarChapter() {
     this.chapterService.criar(this.chapter).subscribe(() => {
       console.log("Criado com sucesso!")
     })
+  }
+  cancel() {
+    this.router.navigate(['/chapter/read'])
   }
 
 }

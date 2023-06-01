@@ -1,0 +1,24 @@
+<mat-card class="card">
+  <form>
+    <mat-form-field>
+      <input matInput placeholder="chapter_status" [(ngModel)]="chapter.chapter_status" name="chapter_status">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="chapter_nome" [(ngModel)]="chapter.chapter_nome" name="chapter_nome">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="chapter_descricao" [(ngModel)]="chapter.chapter_descricao" name="chapter_descricao">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="usuario_id" [(ngModel)]="chapter.usuario_id" name="usuario_id">
+    </mat-form-field>
+
+  </form>
+  <button mat-raised-button (click)="deletarChapter()" color="primary">
+    Excluir
+  </button>
+
+  <button mat-raised-button (click)="cancel()">
+    Cancelar
+  </button>
+</mat-card>

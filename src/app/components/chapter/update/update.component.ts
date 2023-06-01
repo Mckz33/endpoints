@@ -1,15 +1,16 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ChapterService} from "../../../services/chapter.service";
 import {Chapter} from "../../../models/Chapter";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-update',
   templateUrl: './update.component.html',
   styleUrls: ['./update.component.css']
 })
-export class UpdateComponent {
+export class UpdateComponent implements OnInit {
 
-  public chapter: Chapter[] = [{
+  public chapter: Chapter = {
     chapter_id: null as unknown as number,
     chapter_nome: "",
     chapter_descricao: "",
@@ -40,13 +41,27 @@ export class UpdateComponent {
       status: null as unknown as number,
       senacCoin: "",
     }
-  }]
-
-  constructor(private chapterService: ChapterService) {
   }
+
+  constructor(private chapterService: ChapterService, private router: Router, private activateRoute: ActivatedRoute) {
+  }
+
+  ngOnInit() {
+    // @ts-ignore
+    const id = +this.activateRoute.snapshot.paramMap.get('id');
+    this.chapterService.readById(id).subscribe(chapter => {
+      this.chapter = chapter;
+    })
+  }
+
   updateChapter() {
     this.chapterService.update(this.chapter).subscribe(() => {
-      console.log("Atualizado com sucesso!")
+      console.log("Atualizado com sucesso!");
+      this.router.navigate(["/chapter/read"]);
     })
+  }
+
+  cancel() {
+    this.router.navigate(['/chapter/read']);
   }
 }

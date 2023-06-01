@@ -1,13 +1,14 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Chapter} from "../../../models/Chapter";
 import {ChapterService} from "../../../services/chapter.service";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-delete',
   templateUrl: './delete.component.html',
   styleUrls: ['./delete.component.css']
 })
-export class DeleteComponent {
+export class DeleteComponent implements OnInit{
 
   public chapter: Chapter = {
     chapter_id: null as unknown as number,
@@ -41,11 +42,24 @@ export class DeleteComponent {
       senacCoin: "",
     }
   }
-  constructor(private chapterService: ChapterService) {
+
+  ngOnInit() {
+    // @ts-ignore
+    const id = +this.activatedRoute.snapshot.paramMap.get('id');
+    this.chapterService.readById(id).subscribe(chapter => {
+      this.chapter = chapter
+    })
+  }
+
+  constructor(private chapterService: ChapterService, private router: Router, private activatedRoute: ActivatedRoute) {
   }
   deletarChapter() {
-      this.chapterService.delete(this.chapter).subscribe(() => {
+      this.chapterService.delete(this.chapter.chapter_id).subscribe(() => {
         console.log("Deletado com sucesso!")
+        this.router.navigate(["/chapter/read"])
       })
+  }
+  cancel() {
+    this.router.navigate(["/chapter/read"])
   }
 }

@@ -6,10 +6,10 @@ import {UpdateComponent} from "./components/chapter/update/update.component";
 import {DeleteComponent} from "./components/chapter/delete/delete.component";
 
 const routes: Routes = [
-  {path: "chapter/read", component: CreateComponent},
-  {path: "chapter/create", component: ReadComponent},
-  {path: "chapter/delete", component: UpdateComponent},
-  {path: "chapter/update", component: DeleteComponent},
+  {path: "chapter/read", component: ReadComponent},
+  {path: "chapter/create", component: CreateComponent},
+  {path: "chapter/delete/:id", component: DeleteComponent},
+  {path: "chapter/update/:id", component: UpdateComponent},
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

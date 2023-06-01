@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {Chapter} from "../../../models/Chapter";
 import {ChapterService} from "../../../services/chapter.service";
 
@@ -8,6 +8,7 @@ import {ChapterService} from "../../../services/chapter.service";
   styleUrls: ['./read.component.css']
 })
 export class ReadComponent implements OnInit{
+
   ngOnInit(): void {
     this.chapterService.obterTodos().subscribe(todos => {
       this.chapter = todos
@@ -46,6 +47,8 @@ export class ReadComponent implements OnInit{
       senacCoin: "",
     }
   }]
+
+  displayedColumns = ['chapter_id', 'chapter_nome', 'chapter_descricao', 'chapter_status', 'usuario_id'];
   constructor(private chapterService: ChapterService) {
   }
   obterTodos() {
