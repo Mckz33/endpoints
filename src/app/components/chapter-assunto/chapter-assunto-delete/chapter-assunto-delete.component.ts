@@ -15,7 +15,7 @@ export class ChapterAssuntoDeleteComponent {
     chapter_assunto_contador_visualizacao: null as unknown as number,
     chapter_assunto_status: null as unknown as number,
     chapter_id: {
-      chapter_id: null as unknown as number,
+      id: null as unknown as number,
       chapter_nome: "",
       chapter_descricao: "",
       chapter_status: null as unknown as number,

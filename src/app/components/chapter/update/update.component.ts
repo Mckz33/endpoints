@@ -11,7 +11,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 export class UpdateComponent implements OnInit {
 
   public chapter: Chapter = {
-    chapter_id: null as unknown as number,
+    id: null as unknown as number,
     chapter_nome: "",
     chapter_descricao: "",
     chapter_status: null as unknown as number,

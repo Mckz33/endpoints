@@ -9,7 +9,7 @@ const routes: Routes = [
   {path: "chapter/read", component: ReadComponent},
   {path: "chapter/create", component: CreateComponent},
   {path: "chapter/delete/:id", component: DeleteComponent},
-  {path: "chapter/update/:id", component: UpdateComponent},
+  {path: "chapter/update/:id", component: UpdateComponent}
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

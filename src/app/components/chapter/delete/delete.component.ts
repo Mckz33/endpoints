@@ -11,7 +11,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 export class DeleteComponent implements OnInit{
 
   public chapter: Chapter = {
-    chapter_id: null as unknown as number,
+    id: null as unknown as number,
     chapter_nome: "",
     chapter_descricao: "",
     chapter_status: null as unknown as number,
@@ -54,7 +54,7 @@ export class DeleteComponent implements OnInit{
   constructor(private chapterService: ChapterService, private router: Router, private activatedRoute: ActivatedRoute) {
   }
   deletarChapter() {
-      this.chapterService.delete(this.chapter.chapter_id).subscribe(() => {
+      this.chapterService.delete(this.chapter.id).subscribe(() => {
         console.log("Deletado com sucesso!")
         this.router.navigate(["/chapter/read"])
       })
